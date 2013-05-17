@@ -6,10 +6,10 @@ require 'nearest_time_zone/version'
 Gem::Specification.new do |spec|
   spec.name          = "nearest_time_zone"
   spec.version       = NearestTimeZone::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.authors       = ["Sean Devine"]
+  spec.email         = ["seandevine@gopartage.com"]
+  spec.description   = %q{Quickly find the name of a time zone for a latitude and longitude without relying on a web service.}
+  spec.summary       = %q{Quickly find the name of a time zone for a latitude and longitude without relying on a web service.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
