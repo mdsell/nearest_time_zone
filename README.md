@@ -19,7 +19,7 @@ The [https://github.com/gurgeous/kdtree](Kdtree) gem is used to make the search 
 
 ### Load Time
 
-The kdtree and the cities are loaded into memory when the gem is loaded. If you'd like to make that faster, run `rake dump` and the load time should drop significantly. The cities, time zones and kdtree will all be persisted to the file system when run that rake task.
+The kdtree and the cities are loaded into memory when the gem is loaded. If you'd like to make that faster, run `rake nearest_time_zone:dump` and the load time should drop significantly. The cities, time zones and kdtree will all be persisted to the file system when run that rake task.
 
 ## Installation
 
