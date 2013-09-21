@@ -15,7 +15,7 @@ The city data is based on the GeoNames [cities1000.zip](http://download.geonames
 
 ### Kdtree
 
-The [https://github.com/gurgeous/kdtree](Kdtree) gem is used to make the search so fast.
+The [Kdtree](https://github.com/gurgeous/kdtree) gem is used to make the search so fast.
 
 ### Load Time
 
