@@ -32,7 +32,8 @@ module NearestTimeZone
     end
 
     def self.nearest(latitude, longitude)
-      all[kdtree.nearest(latitude, longitude)]
+      result = kdtree.nearest([latitude, longitude]) 
+      all[result.data] if result
     end
 
     def time_zone
@@ -56,9 +57,11 @@ module NearestTimeZone
 
     def self.build_kdtree
       begin
-        File.open(File.expand_path("../../../data/kdtree.dump", __FILE__)) { |f| Kdtree.new(f) }
+        Marshal.load(File.read(File.expand_path("../../../data/cities.dump", __FILE__)))
       rescue
-        Kdtree.new all.collect { |id, city| [city.latitude, city.longitude, city.id] }
+        Geokdtree::Tree.new(2).tap do |tree|
+          all.each { |_, city| tree.insert [city.latitude, city.longitude], city.id }
+        end
       end
     end
 

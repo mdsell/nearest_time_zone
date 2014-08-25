@@ -13,7 +13,7 @@ namespace :nearest_time_zone do
     end
 
     File.open(File.expand_path("../data/kdtree.dump", __FILE__),"w") do |f|
-      NearestTimeZone::City.kdtree.persist(f)
+      f.write Marshal.dump(NearestTimeZone::City.kdtree)
     end
   end
 end

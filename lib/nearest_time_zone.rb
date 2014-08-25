@@ -1,5 +1,5 @@
 require "csv"
-require "kdtree"
+require "geokdtree"
 require "andand"
 
 require "require_all"
